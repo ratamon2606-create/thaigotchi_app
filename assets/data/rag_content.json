@@ -1,0 +1,576 @@
+{
+  "version": "7.0",
+  "description": "Thaigotchi RAG — complete temple lore (all details)",
+
+  "greetings_th": [
+    "หวัดดีครับ! ผมรู้เรื่องวัดเยอะนะ ถามมาได้เลย",
+    "สวัสดีครับ! อยากฟังเรื่องอะไรล่ะ",
+    "ไงครับ! เรื่องเล่าวัดผมเก่งสุดเลย"
+  ],
+
+  "greetings_en": [
+    "Hi! I know lots about temples. Ask me!",
+    "Hello! What story would you like?"
+  ],
+
+  "fallbacks_th": [
+    "เอ๊ะ เรื่องนี้ผมไม่รู้เลยอ่ะครับ ลองถามเรื่องวัดดูมั้ย",
+    "อันนี้ผมไม่แน่ใจครับ แต่เรื่องวัด ผมเล่าได้นะ",
+    "ผมไม่รู้จริงๆ ครับ ลองพาผมไปเที่ยววัดมั้ย"
+  ],
+
+  "fallbacks_en": [
+    "Hmm, don't know that one. Try asking about a temple?",
+    "Not sure about that. But I know temples!"
+  ],
+
+  "topics": [
+    {
+      "id": "wpk_history",
+      "location_id": "wat_phra_kaew",
+      "question_type": "story",
+      "keywords_th": ["พระแก้ว", "วัดพระแก้ว", "ประวัติพระแก้ว", "เรื่องวัดพระแก้ว", "ประวัติ", "สร้างวัดพระแก้ว", "ศรีรัตนศาสดาราม"],
+      "keywords_en": ["phra kaew history", "wat phra kaew"],
+      "answer_th": "วัดพระแก้วชื่อจริงว่าวัดพระศรีรัตนศาสดารามครับ สร้างปี พ.ศ. 2325 พร้อมกับการตั้งกรุงเทพเลย เป็นวัดในเขตพระราชฐาน ไม่มีพระสงฆ์จำพรรษา ใช้ประกอบพระราชพิธีเท่านั้น",
+      "answer_en": "Officially Wat Phra Sri Rattana Satsadaram. Built 1782 with Bangkok's founding. A royal chapel with no resident monks—only for royal ceremonies."
+    },
+    {
+      "id": "wpk_buddha",
+      "location_id": "wat_phra_kaew",
+      "question_type": "what",
+      "keywords_th": ["พระแก้วมรกต", "มรกต", "หยก", "พระมรกต", "ทำจากอะไร", "หยกอ่อน"],
+      "keywords_en": ["emerald buddha", "jade buddha", "nephrite"],
+      "answer_th": "พระแก้วมรกตจริงๆ แล้วแกะจากหยกอ่อนสีเขียวก้อนเดียวนะครับ ไม่ใช่พลอยมรกตอย่างที่ชื่อบอก ตำนานเล่าว่าค้นพบที่เชียงรายหลังฟ้าผ่าเจดีย์ เดินทางผ่านเชียงใหม่ หลวงพระบาง เวียงจันทน์ ก่อนมาประดิษฐานที่นี่",
+      "answer_en": "Actually carved from a single piece of jade (nephrite), not emerald! Legend says it was found in Chiang Rai after lightning struck a stupa. Traveled through Chiang Mai, Luang Prabang, Vientiane before arriving here."
+    },
+    {
+      "id": "wpk_robes",
+      "location_id": "wat_phra_kaew",
+      "question_type": "what",
+      "keywords_th": ["เครื่องทรง", "ฤดู", "เปลี่ยนเครื่อง", "ผ้าทรง", "3 ฤดู", "จันทรคติ"],
+      "keywords_en": ["robes", "seasonal", "change clothes"],
+      "answer_th": "เครื่องทรงพระแก้วมรกตเปลี่ยน 3 ฤดูครับ ฤดูร้อน ฤดูฝน ฤดูหนาว พระมหากษัตริย์ทรงเปลี่ยนเองตามจันทรคติ ของเดิมที่เปลี่ยนแล้วจะเก็บที่พิพิธภัณฑ์วัดพระแก้ว",
+      "answer_en": "Three seasonal robes—summer, rainy, cool. The King changes them himself by lunar calendar. Old robes displayed at the temple museum."
+    },
+    {
+      "id": "wpk_chedi",
+      "location_id": "wat_phra_kaew",
+      "question_type": "what",
+      "keywords_th": ["พระศรีรัตนเจดีย์", "เจดีย์ทอง", "โมเสกทอง", "อิตาลี", "เจดีย์สีทอง"],
+      "keywords_en": ["golden chedi", "gold stupa"],
+      "answer_th": "พระศรีรัตนเจดีย์เป็นเจดีย์ทองคำที่เห็นเด่นเลยครับ ประดับด้วยกระเบื้องโมเสกสีทองจากอิตาลี รัชกาลที่ 4 โปรดให้สร้าง ภายในประดิษฐานพระบรมสารีริกธาตุ",
+      "answer_en": "The golden Phra Si Rattana Chedi—the iconic gold stupa. Decorated with gold mosaic tiles from Italy, built by King Rama IV. Houses Buddha relics inside."
+    },
+    {
+      "id": "wpk_angkor",
+      "location_id": "wat_phra_kaew",
+      "question_type": "what",
+      "keywords_th": ["นครวัดจำลอง", "นครวัด", "กัมพูชา", "เขมร", "จำลอง"],
+      "keywords_en": ["angkor wat", "cambodia replica"],
+      "answer_th": "นครวัดจำลองที่วัดพระแก้วครับ รัชกาลที่ 4 โปรดให้สร้างเพื่อให้คนไทยเห็นความยิ่งใหญ่ของกัมพูชา เป็นแบบจำลองนครวัดที่ละเอียดมาก",
+      "answer_en": "A replica of Angkor Wat! King Rama IV built it to show Thais the greatness of Cambodia. Highly detailed miniature."
+    },
+    {
+      "id": "wpk_garuda",
+      "location_id": "wat_phra_kaew",
+      "question_type": "what",
+      "keywords_th": ["ครุฑ", "ครุฑยุดนาค", "นาค", "รอบโบสถ์", "112 ตน"],
+      "keywords_en": ["garuda", "naga"],
+      "answer_th": "รอบพระอุโบสถมีครุฑยุดนาค 112 ตนคอยปกป้องครับ ครุฑเป็นพญานก คู่อริของนาค การจับนาคแสดงถึงพลังคุ้มครอง เป็นสัญลักษณ์ราชสำนักไทยด้วย",
+      "answer_en": "112 Garuda-and-Naga sculptures guard the main hall. Garuda is the eagle king, eternal enemy of the Naga serpent—a Thai royal symbol of protection."
+    },
+    {
+      "id": "wpk_jivaka",
+      "location_id": "wat_phra_kaew",
+      "question_type": "what",
+      "keywords_th": ["ชีวกโกมารภัจจ์", "พระชีวก", "หมอใหญ่", "บรมครูแพทย์", "ขอพรเรื่องโรค"],
+      "keywords_en": ["jivaka", "ancient doctor", "healing prayer"],
+      "answer_th": "พระชีวกโกมารภัจจ์เป็นบรมครูแพทย์แผนโบราณครับ เคยรักษาพระพุทธเจ้า รูปหล่อท่านอยู่ในวัดพระแก้ว สายสุขภาพมักไปกราบขอพรเรื่องโรคภัย",
+      "answer_en": "Jivaka was the ancient master physician who treated the Buddha himself. His statue is here—people pray for healing and good health."
+    },
+    {
+      "id": "wpk_holy_water",
+      "location_id": "wat_phra_kaew",
+      "question_type": "what",
+      "keywords_th": ["น้ำมนต์", "ดอกบัว", "เคาะศีรษะ", "พรมน้ำมนต์", "ก่อนเข้าโบสถ์"],
+      "keywords_en": ["holy water", "lotus", "blessing"],
+      "answer_th": "ก่อนเข้าพระอุโบสถจะมีจุดรับน้ำมนต์ดอกบัวให้เคาะศีรษะครับ ใช้ก้านบัวจุ่มน้ำมนต์แล้วเคาะที่หัวเบาๆ เพื่อความเป็นมงคล",
+      "answer_en": "Before entering the main hall, there's a holy water station with lotus stems—dip in blessed water and tap your head gently for good luck."
+    },
+    {
+      "id": "wpk_no_photo",
+      "location_id": "wat_phra_kaew",
+      "question_type": "what",
+      "keywords_th": ["ห้ามถ่ายรูป", "ถ่ายรูปได้มั้ย", "ในโบสถ์", "ข้อห้าม"],
+      "keywords_en": ["no photo", "photography rules"],
+      "answer_th": "ห้ามถ่ายรูปด้านในพระอุโบสถเด็ดขาดนะครับ ทั้งภาพนิ่งและวิดีโอ เป็นกฎเข้มงวดของวัด ด้านนอกถ่ายได้ปกติเลย",
+      "answer_en": "Strictly no photos inside the main hall (where the Emerald Buddha is)—neither stills nor video. Outside is fine!"
+    },
+    {
+      "id": "wpk_8_prangs",
+      "location_id": "wat_phra_kaew",
+      "question_type": "what",
+      "keywords_th": ["พระปรางค์ 8 องค์", "8 สี", "พระพุทธคุณ 8", "ปรางค์เรียง"],
+      "keywords_en": ["8 prangs", "eight pagodas"],
+      "answer_th": "ที่วัดพระแก้วมีพระปรางค์ 8 องค์ 8 สีตั้งเรียงรายอยู่ครับ แทนพระพุทธคุณ 8 ประการ คือคุณสมบัติของพระพุทธเจ้า 8 อย่าง สร้างในสมัยรัชกาลที่ 1",
+      "answer_en": "Eight prangs in different colors lined up at Wat Phra Kaew, each representing one of the 8 virtues of the Buddha. Built in Rama I era."
+    },
+    {
+      "id": "wpk_giants",
+      "location_id": "wat_phra_kaew",
+      "question_type": "what",
+      "keywords_th": ["ยักษ์", "ทวารบาล", "ยักษ์วัดพระแก้ว", "ยักษ์เฝ้าวัด", "12 ตน", "6 คู่"],
+      "keywords_en": ["giant", "yaksha", "guardian", "demon"],
+      "answer_th": "ยักษ์ทวารบาล 12 ตน 6 คู่ ยืนเฝ้าประตูพระอุโบสถครับ หันหน้าเข้าโบสถ์เพื่อปกป้องพระแก้ว มาจากตัวละครในรามเกียรติ์ทั้งหมด สังเกตดีๆ ยักษ์ที่นี่จะหน้าตาดุดันและถืออาวุธเตรียมพร้อมรบมาก ดูน่ากลัวกว่ายักษ์วัดแจ้งที่ยืนสำรวมครับ",
+      "answer_en": "12 giant guardians in 6 pairs at the gates, facing inward to protect the Emerald Buddha. All from the Ramakien epic. If you look closely, these giants look much fiercer and more terrifying than the ones at Wat Arun, standing in aggressive battle-ready poses!"
+    },
+    {
+      "id": "wpk_thotsakan",
+      "location_id": "wat_phra_kaew",
+      "question_type": "who",
+      "keywords_th": ["ทศกัณฐ์", "สหัสเดชะ", "ยักษ์เขียว", "ยักษ์ขาว", "คู่ที่ 1"],
+      "keywords_en": ["thotsakan", "sahatsadecha"],
+      "answer_th": "คู่ที่ 1 ดังสุดคือทศกัณฐ์ตัวสีเขียวกับสหัสเดชะตัวสีขาวครับ ทศกัณฐ์เป็นเจ้ากรุงลงกามี 10 หน้า 20 มือ ส่วนสหัสเดชะมีพันหน้าสองพันมือ เก่งคนละแบบเลย",
+      "answer_en": "Pair 1: green Thotsakan (lord of Lanka, 10 faces, 20 arms) and white Sahatsadecha (1000 faces, 2000 arms). Each powerful in different ways."
+    },
+    {
+      "id": "wpk_giants_pair2",
+      "location_id": "wat_phra_kaew",
+      "question_type": "who",
+      "keywords_th": ["ไมยราพ", "วิรุญจำบัง", "สะกดทัพ", "ซ่อนตัว", "คู่ที่ 2"],
+      "keywords_en": ["maiyarap", "virunchamabang"],
+      "answer_th": "คู่ที่ 2 ไมยราพสีม่วงอ่อนกับวิรุญจำบังสีกรมท่าครับ ไมยราพเก่งสะกดทัพ ส่วนวิรุญจำบังซ่อนตัวในฟองอากาศได้ ทั้งคู่เคยใช้อุบายลักลอบเข้าค่ายพระราม",
+      "answer_en": "Pair 2: light purple Maiyarap and dark blue Virunchamabang. Maiyarap masters trance-spells, Virunchamabang can hide in air bubbles. Both used trickery against Rama's army."
+    },
+    {
+      "id": "wpk_giants_pair3",
+      "location_id": "wat_phra_kaew",
+      "question_type": "who",
+      "keywords_th": ["สุริยาภพ", "อินทรชิต", "หอกเมฆพัท", "รบชนะพระอินทร์", "คู่ที่ 3"],
+      "keywords_en": ["suriyaphop", "indrajit"],
+      "answer_th": "คู่ที่ 3 สุริยาภพสีแดงถือหอกเมฆพัทกับอินทรชิตสีเขียวครับ อินทรชิตเป็นลูกทศกัณฐ์ที่เคยรบชนะพระอินทร์เลยได้ชื่อนี้ เป็นแม่ทัพยักษ์ที่เก่งกาจมาก",
+      "answer_en": "Pair 3: red Suriyaphop with the Mek-phat spear, and green Indrajit. Indrajit is Thotsakan's son who once defeated Indra (god of war)—hence the name."
+    },
+    {
+      "id": "wpk_giants_pair4",
+      "location_id": "wat_phra_kaew",
+      "question_type": "who",
+      "keywords_th": ["มังกรกัณฐ์", "วิรุญหก", "เขี้ยวโง้ง", "เจ้าเมืองบาดาล", "คู่ที่ 4"],
+      "keywords_en": ["mangkornkan", "virunhok"],
+      "answer_th": "คู่ที่ 4 มังกรกัณฐ์สีเขียวเขี้ยวโง้งกับวิรุญหกสีน้ำเงินเข้มครับ วิรุญหกเป็นเจ้าเมืองบาดาลใต้น้ำ ดูแลอาณาจักรใต้สมุทร",
+      "answer_en": "Pair 4: green Mangkornkan with curved tusks, and dark blue Virunhok. Virunhok rules the underwater kingdom of Badan."
+    },
+    {
+      "id": "wpk_giants_pair5",
+      "location_id": "wat_phra_kaew",
+      "question_type": "who",
+      "keywords_th": ["สัทธาสูร", "วิรุญมุข", "หน้าดุ", "ยักษ์เด็ก", "คู่ที่ 5"],
+      "keywords_en": ["satthasoon", "virunmuk"],
+      "answer_th": "คู่ที่ 5 สัทธาสูรสีเขียวเข้มหน้าดุกับวิรุญมุขสีเขียวสว่างเป็นยักษ์เด็กครับ วิรุญมุขเด็กกว่าตัวอื่นๆ เห็นได้ชัดจากใบหน้า",
+      "answer_en": "Pair 5: dark green stern-faced Satthasoon and bright green Virunmuk—a young giant. Virunmuk looks visibly younger than the others."
+    },
+    {
+      "id": "wpk_giants_pair6",
+      "location_id": "wat_phra_kaew",
+      "question_type": "who",
+      "keywords_th": ["ทศคีรีวัน", "ทศคีรีธร", "ยักษ์งวง", "ลูกครึ่งช้าง", "คู่ที่ 6"],
+      "keywords_en": ["thossakiriwan", "thossakirithon", "elephant trunk"],
+      "answer_th": "คู่ที่ 6 ทศคีรีวันสีเขียวกับทศคีรีธรสีเหลืองครับ พิเศษมาก เป็นยักษ์ลูกครึ่งช้างที่มีงวงที่จมูก หาดูยาก ลองสังเกตดู",
+      "answer_en": "Pair 6: green Thossakiriwan and yellow Thossakirithon—special elephant-giants with trunks for noses! Rare and unique—look for them!"
+    },
+    {
+      "id": "wpk_murals",
+      "location_id": "wat_phra_kaew",
+      "question_type": "what",
+      "keywords_th": ["จิตรกรรม", "ฝาผนัง", "รามเกียรติ์", "ภาพวาด", "ระเบียง", "178 ห้อง", "ทวนเข็มนาฬิกา"],
+      "keywords_en": ["mural", "painting", "ramakien"],
+      "answer_th": "จิตรกรรมฝาผนังรามเกียรติ์ครับ มี 178 ห้อง ยาวที่สุดในโลก ต้องเดินทวนเข็มนาฬิกาดู ฉากเด็ดคือหนุมานสู้นางสุพรรณมัจฉา และหนุมานอมพลับพลาที่มีไมยราพแอบย่องมาสะกดทัพ บูรณะใหม่ทุก 25-50 ปี",
+      "answer_en": "Ramakien murals: 178 panels, longest in the world! Walk counter-clockwise to read. Famous scenes: Hanuman vs Suphanmatcha mermaid, Hanuman swallowing the pavilion with Maiyarap sneaking in. Restored every 25-50 years."
+    },
+    {
+      "id": "wpk_mural_time",
+      "location_id": "wat_phra_kaew",
+      "question_type": "how",
+      "keywords_th": ["ดูจิตรกรรมเวลาไหน", "แสงสวย", "บ่ายโมง", "ทองคำเปลว"],
+      "keywords_en": ["best time mural", "viewing"],
+      "answer_th": "เวลาดีสุดในการชมจิตรกรรมคือช่วงบ่ายโมงครับ แสงจะส่องเข้าฝั่งทิศตะวันออก ทำให้เห็นทองคำเปลวบนภาพชัดเจน รายละเอียดสวยมาก",
+      "answer_en": "Best time to view murals: around 1 PM—light streams in from the east, making the gold leaf shine beautifully."
+    },
+    {
+      "id": "wpk_hidden_art",
+      "location_id": "wat_phra_kaew",
+      "question_type": "what",
+      "keywords_th": ["ภาพกาก", "ภาพแอบ", "วิถีชาวบ้าน", "ฝรั่ง", "ภาพซ่อน", "easter egg"],
+      "keywords_en": ["hidden paintings", "easter egg"],
+      "answer_th": "ที่มุมจิตรกรรมมี ภาพกาก ซ่อนอยู่ครับ ช่างแอบวาดวิถีชีวิตชาวบ้าน เช่น ฝรั่งใส่หมวก คนทำกับข้าว หรือคนแอบเข้าห้องน้ำ ลองมองหาตามมุมกำแพงดูสนุกมาก",
+      "answer_en": "Look closely for 'phap kak'—hidden everyday scenes painters secretly added: foreigners in hats, people cooking, even someone sneaking to the toilet! A fun easter egg hunt."
+    },
+    {
+      "id": "wpk_visit",
+      "location_id": "wat_phra_kaew",
+      "question_type": "how",
+      "keywords_th": ["เที่ยววัดพระแก้ว", "ไปวัดพระแก้ว", "เปิด", "เวลาเปิด", "ค่าเข้า", "บ่ายสามครึ่ง"],
+      "keywords_en": ["visit phra kaew", "open", "hours", "fee"],
+      "answer_th": "เปิด 8:30 ถึง 15:30 น. ค่าเข้า 500 บาทครับ ช่วงเช้าแสงสวยที่สุด แต่งตัวสุภาพห้ามกางเกงขาสั้นและแขนกุดเด็ดขาด ห้ามถ่ายรูปด้านในพระอุโบสถ",
+      "answer_en": "Open 8:30 AM-3:30 PM, 500 baht. Morning light is best. Strict dress code—no shorts or sleeveless. No photos inside the main hall."
+    },
+
+    {
+      "id": "wp_history",
+      "location_id": "wat_pho",
+      "question_type": "story",
+      "keywords_th": ["วัดโพธิ์", "โพธิ์", "ประวัติวัดโพธิ์", "เรื่องวัดโพธิ์", "เชตุพน", "พระเชตุพน"],
+      "keywords_en": ["wat pho", "history", "chetuphon"],
+      "answer_th": "วัดโพธิ์ชื่อจริงว่าวัดพระเชตุพนวิมลมังคลารามครับ เป็นวัดเก่าแก่ที่สุดในกรุงเทพ มีตั้งแต่สมัยอยุธยา รัชกาลที่ 1 ทรงปฏิสังขรณ์ใหญ่ พระบรมราชสรีรางคารของท่านก็อยู่ที่นี่",
+      "answer_en": "Officially Wat Phra Chetuphon. Bangkok's oldest temple, from Ayutthaya era. King Rama I renovated it heavily. His ashes are kept here."
+    },
+    {
+      "id": "wp_unesco",
+      "location_id": "wat_pho",
+      "question_type": "what",
+      "keywords_th": ["UNESCO", "ยูเนสโก", "มรดกโลก", "มรดกความทรงจำ", "มหาวิทยาลัยแห่งแรก"],
+      "keywords_en": ["unesco", "world heritage", "first university"],
+      "answer_th": "วัดโพธิ์ได้ขึ้นทะเบียน UNESCO เป็นมรดกความทรงจำแห่งโลกครับ เพราะรัชกาลที่ 3 ให้จารึกวิชาความรู้สารพัดอย่างไว้ตามศาลาราย ทำให้เป็นเหมือนมหาวิทยาลัยเปิดแห่งแรกของไทย",
+      "answer_en": "UNESCO Memory of the World heritage site! Because King Rama III had knowledge inscribed on the temple walls—making it Thailand's first open university."
+    },
+    {
+      "id": "wp_inscriptions",
+      "location_id": "wat_pho",
+      "question_type": "what",
+      "keywords_th": ["จารึก", "ศาลาราย", "ความรู้", "ตำราจารึก", "วิชาความรู้"],
+      "keywords_en": ["inscriptions", "knowledge walls"],
+      "answer_th": "รัชกาลที่ 3 ทรงให้จารึกวิชาความรู้ไว้ตามศาลารายในวัดโพธิ์ครับ ทั้งแพทย์ศาสตร์ ดาราศาสตร์ วรรณกรรม ประวัติศาสตร์ เพื่อให้คนทั่วไปได้เรียนรู้ฟรี เหมือนห้องสมุดเปิด",
+      "answer_en": "King Rama III inscribed all kinds of knowledge on the temple pavilions—medicine, astronomy, literature, history—so anyone could learn for free. Like an open library!"
+    },
+    {
+      "id": "wp_1000_buddhas",
+      "location_id": "wat_pho",
+      "question_type": "what",
+      "keywords_th": ["พระพุทธรูป", "1000 องค์", "เยอะที่สุด", "มากที่สุด"],
+      "keywords_en": ["1000 buddhas", "most images"],
+      "answer_th": "วัดโพธิ์มีพระพุทธรูปมากที่สุดในประเทศกว่า 1,000 องค์เลยครับ ทั้งใหญ่และเล็ก เป็นพระพุทธรูปสำคัญที่รวบรวมมาจากที่ต่างๆ ทั่วประเทศในสมัยรัชกาลที่ 1",
+      "answer_en": "Wat Pho has over 1,000 Buddha images—the most in Thailand! Collected from across the country during King Rama I's era."
+    },
+    {
+      "id": "wp_reclining",
+      "location_id": "wat_pho",
+      "question_type": "what",
+      "keywords_th": ["พระนอน", "พระพุทธไสยาส", "ไสยาส", "พระนอนใหญ่", "พระยาว", "46 เมตร"],
+      "keywords_en": ["reclining buddha", "sleeping buddha"],
+      "answer_th": "พระนอนวัดโพธิ์ยาว 46 เมตร สูง 15 เมตรครับ เป็นพระพุทธรูปใหญ่สุดในกรุงเทพ ฝ่าพระบาทประดับมุกเป็นรูปมงคล 108 ประการ ละเอียดสุดๆ",
+      "answer_en": "46m long, 15m tall—biggest Buddha in Bangkok. Feet inlaid with 108 lucky symbols in mother-of-pearl, incredibly detailed."
+    },
+    {
+      "id": "wp_108_bowls",
+      "location_id": "wat_pho",
+      "question_type": "what",
+      "keywords_th": ["บาตร 108", "หยอดเหรียญ", "108 ใบ", "ทำสมาธิ", "ขอพร", "เสียงกังวาน"],
+      "keywords_en": ["108 bowls", "coins", "blessing"],
+      "answer_th": "ด้านหลังพระนอนมีบาตร 108 ใบครับ ซื้อเหรียญมาหยอดทีละใบ ฟังเสียงกังวานเพื่อทำสมาธิและขอพร เลข 108 เป็นเลขมงคลในพุทธศาสนา ตรงกับมงคลที่ฝ่าพระบาทพระนอน",
+      "answer_en": "Behind the Reclining Buddha: 108 alms bowls! Drop coins one by one—the sound helps meditation and brings blessings. 108 matches the lucky symbols on the Buddha's feet."
+    },
+    {
+      "id": "wp_pagodas",
+      "location_id": "wat_pho",
+      "question_type": "what",
+      "keywords_th": ["เจดีย์ 4", "มหาเจดีย์", "4 รัชกาล", "เจดีย์สี", "เจดีย์วัดโพธิ์"],
+      "keywords_en": ["four pagodas", "four kings"],
+      "answer_th": "มหาเจดีย์ 4 รัชกาลครับ สีเขียวของรัชกาลที่ 1 บรรจุพระบรมอัฐิ สีขาวของรัชกาลที่ 2 หมายถึงความบริสุทธิ์ สีเหลืองของรัชกาลที่ 3 เป็นพุทธบูชา สีน้ำเงินเข้มของรัชกาลที่ 4 ทรงอยุธยา หลังจากนี้ไม่สร้างเจดีย์รัชกาลอีกเพราะที่เต็มแล้ว",
+      "answer_en": "Four royal pagodas: green (Rama I, holds royal ashes), white (Rama II, purity), yellow (Rama III, Buddha offering), dark blue (Rama IV, Ayutthaya style). No more after that—no space left."
+    },
+    {
+      "id": "wp_chinese_statues",
+      "location_id": "wat_pho",
+      "question_type": "what",
+      "keywords_th": ["ลั่นถัน", "ตุ๊กตาจีน", "ตุ๊กตาหิน", "ถ่วงเรือ", "หินถ่วงเรือ"],
+      "keywords_en": ["chinese statues", "stone figures", "ballast"],
+      "answer_th": "ตุ๊กตาหินจีนหรือลั่นถันครับ ใช้ถ่วงเรือสินค้าตอนกลับจากจีนสมัยรัชกาลที่ 3 พอเรือว่างก็ใช้หินถ่วงไว้ พอถึงไทยก็เอามาตั้งโชว์ที่วัด มีหลายขนาดทั้งทหาร ขุนนาง สตรี",
+      "answer_en": "Chinese stone figures used as ship ballast during Rama III's trade with China! Empty boats needed weight—stones came home and got displayed at the temple. Soldiers, officials, women—all kinds!"
+    },
+    {
+      "id": "wp_massage",
+      "location_id": "wat_pho",
+      "question_type": "what",
+      "keywords_th": ["นวด", "นวดแผนไทย", "แผนไทย", "โรงเรียนนวด", "ฤาษีดัดตน", "24 ท่า"],
+      "keywords_en": ["massage", "thai massage", "rishi"],
+      "answer_th": "วัดโพธิ์เป็นต้นกำเนิดนวดแผนไทยครับ มีรูปปั้นฤาษีดัดตน 24 ท่า จากเดิม 80 ท่าที่หายไปแล้ว นวดของแท้ต้องไปจองคิวที่ศาลาการเปรียญ ราคา 480 บาทต่อชั่วโมง",
+      "answer_en": "Birthplace of Thai massage! Has rishi self-stretching statues—24 of original 80 poses remain. Book real massage at the school inside. About 480 baht/hour."
+    },
+    {
+      "id": "wp_doors",
+      "location_id": "wat_pho",
+      "question_type": "what",
+      "keywords_th": ["บานประตู", "ลายฝรั่ง", "ฝรั่งจูงหมา", "ประตูพระอุโบสถ", "การค้า"],
+      "keywords_en": ["doors", "foreigner painting"],
+      "answer_th": "บานประตูพระอุโบสถวัดโพธิ์ด้านในมีลายวาดฝรั่งจูงหมาด้วยนะครับ สะท้อนยุคการค้าเฟื่องฟูสมัยรัชกาลที่ 3 ที่ติดต่อกับชาวต่างชาติเยอะ",
+      "answer_en": "The main hall's inner doors have a painting of a foreigner walking a dog! Reflects Rama III's booming trade era when foreign contact was common."
+    },
+    {
+      "id": "wp_tha_tien",
+      "location_id": "wat_pho",
+      "question_type": "story",
+      "keywords_th": ["ท่าเตียน", "ศึกยักษ์", "ทวงหนี้", "ยักษ์ตีกัน", "พระอิศวรสาป"],
+      "keywords_en": ["tha tien", "giant fight"],
+      "answer_th": "เรื่องนี้มันส์มากครับ! ตำนานเล่าว่ายักษ์วัดโพธิ์ไปยืมเงินยักษ์วัดแจ้งแล้วไม่ยอมคืน ทศกัณฐ์กับสหัสเดชะเลยข้ามแม่น้ำมาทวงหนี้ คุยกันไม่ลงตัวเลยเกิดการตะลุมบอนกันครั้งใหญ่ พลังของยักษ์ทำให้พื้นที่แถวนั้นถูกเหยียบจนพังพินาศและราบเป็นหน้ากลอง ชาวบ้านเลยเรียกว่า 'ท่าเตียน' จนสุดท้ายพระอิศวรต้องลงมาห้ามทัพและสาปให้ทั้งหมดกลายเป็นหินเฝ้าวัดครับ",
+      "answer_en": "The Giant Debt Legend! Wat Pho giants borrowed money from Wat Arun giants and refused to pay back. They fought across the river so hard the land was flattened—hence 'Tha Tien' (flat pier). Lord Shiva had to turn them into stone."
+    },
+    {
+      "id": "wp_real_giants",
+      "location_id": "wat_pho",
+      "question_type": "what",
+      "keywords_th": ["ยักษ์วัดโพธิ์", "ยักษ์ตัวจริง", "ยักษ์ซ่อน", "พญาขร", "แสงอาทิตย์", "พระมณฑป"],
+      "keywords_en": ["wat pho real giants"],
+      "answer_th": "ยักษ์วัดโพธิ์ตัวจริงไม่ใช่ลั่นถันใหญ่หน้าวัดนะครับ ตัวจริงคือยักษ์ 4 ตนตัวเล็กๆ คือ พญาขร สัทธาสูร ไมยราพ และแสงอาทิตย์ ซ่อนอยู่ในซุ้มประตูทางเข้าพระมณฑป ต้องสังเกตหน่อย ในรามเกียรติ์เป็นพวกเดียวกันแต่ตำนานท้องถิ่นกลับให้ตีกันเรื่องเงิน",
+      "answer_en": "The 'real' Wat Pho giants aren't the big Chinese statues—they're 4 small ones: Phaya Khon, Satthasoon, Maiyarap, and Saeng-athit, hidden in the arch gates of the Phra Mondop! In the Ramakien they're allies, but local legend makes them fight over money."
+    },
+    {
+      "id": "wp_visit",
+      "location_id": "wat_pho",
+      "question_type": "how",
+      "keywords_th": ["เที่ยววัดโพธิ์", "ไปวัดโพธิ์", "เวลาเปิดวัดโพธิ์", "ค่าเข้าวัดโพธิ์"],
+      "keywords_en": ["visit wat pho", "open hours"],
+      "answer_th": "วัดโพธิ์เปิด 8:00 ถึง 18:30 น. ค่าเข้า 300 บาทครับ มีน้ำเย็นแถมให้ด้วย เปิดจนถึงเย็นกว่าวัดพระแก้ว เดินสบายๆ ได้ทั้งวัน",
+      "answer_en": "Wat Pho is open 8 AM-6:30 PM, 300 baht entry (free water included!). Stays open later than Wat Phra Kaew—plenty of time to explore."
+    },
+
+    {
+      "id": "wa_history",
+      "location_id": "wat_arun",
+      "question_type": "story",
+      "keywords_th": ["วัดอรุณ", "อรุณ", "ประวัติวัดอรุณ", "เรื่องวัดอรุณ", "ตากสิน", "แจ้ง", "วัดแจ้ง"],
+      "keywords_en": ["wat arun", "dawn", "taksin"],
+      "answer_th": "วัดอรุณราชวรารามหรือวัดแจ้งครับ พระเจ้าตากสินมหาราชล่องเรือมาถึงตอนรุ่งสางเลยตั้งชื่ออรุณ เคยเป็นที่ประดิษฐานพระแก้วมรกตอยู่ 5 ปีก่อนย้ายไปวัดพระแก้ว",
+      "answer_en": "Wat Arun (Wat Chaeng). King Taksin's boat arrived at dawn—hence 'Arun' (dawn). Housed the Emerald Buddha for 5 years before it moved to Wat Phra Kaew."
+    },
+    {
+      "id": "wa_prang",
+      "location_id": "wat_arun",
+      "question_type": "what",
+      "keywords_th": ["พระปรางค์", "ปรางค์วัดอรุณ", "เครื่องเคลือบ", "กระเบื้อง", "สูง", "82 เมตร", "เบญจรงค์"],
+      "keywords_en": ["prang", "porcelain"],
+      "answer_th": "พระปรางค์ประธานสูง 81.85 เมตรครับ จำลองเขาพระสุเมรุตามคติจักรวาลวิทยา ตกแต่งด้วยเศษถ้วยชามเบญจรงค์และเครื่องเคลือบจีนที่แตกจากการขนเรือ เอามาตัดเรียงใหม่เป็นรูปดอกไม้และพวงมาลัย",
+      "answer_en": "Main prang stands 81.85m, representing Mount Meru in Buddhist cosmology. Decorated with broken Benjarong and Chinese porcelain from shipping accidents—cut and arranged into flowers and garlands!"
+    },
+    {
+      "id": "wa_cosmology",
+      "location_id": "wat_arun",
+      "question_type": "what",
+      "keywords_th": ["เขาพระสุเมรุ", "พระสุเมรุ", "จักรวาลวิทยา", "คติพุทธ", "สัญลักษณ์ปรางค์"],
+      "keywords_en": ["mount meru", "cosmology"],
+      "answer_th": "เขาพระสุเมรุคือเขาศูนย์กลางจักรวาลในความเชื่อพุทธครับ พระปรางค์วัดอรุณจำลองมาจากเขานี้ตามคติจักรวาลวิทยา ปรางค์ใหญ่ตรงกลาง 4 ปรางค์เล็กรอบคือเขาบริวาร",
+      "answer_en": "Mount Meru is the center of the Buddhist universe. The main prang represents it per Buddhist cosmology, with 4 smaller satellites around as subordinate mountains."
+    },
+    {
+      "id": "wa_climb",
+      "location_id": "wat_arun",
+      "question_type": "how",
+      "keywords_th": ["ปีน", "ขึ้นปรางค์", "บันได", "ชัน", "บันไดชัน", "ทางไปสวรรค์"],
+      "keywords_en": ["climb", "stairs", "steep"],
+      "answer_th": "บันไดพระปรางค์ชันมากนะครับ เกือบตั้งฉาก ตั้งใจทำให้ชันเพื่อเตือนว่าทางไปสวรรค์นั้นยากลำบาก ต้องจับราวให้แน่น ขึ้นไปแล้ววิวสวยมาก เห็นแม่น้ำเจ้าพระยาและกรุงเทพชัด",
+      "answer_en": "Stairs are nearly vertical—intentionally steep to remind you the path to heaven is hard! Hold the rails tight. Amazing view of the Chao Phraya from up there."
+    },
+    {
+      "id": "wa_carriers",
+      "location_id": "wat_arun",
+      "question_type": "what",
+      "keywords_th": ["อมนุษย์แบก", "ยักษ์แบก", "ลิงแบก", "เทวดาแบก", "ฐานปรางค์"],
+      "keywords_en": ["carrier statues", "guardian figures"],
+      "answer_th": "ฐานปรางค์มีอมนุษย์แบกอยู่ตามลำดับชั้นครับ ชั้นล่างสุดเป็นยักษ์ ชั้นกลางเป็นลิงที่หน้าตาอารมณ์ตลกขบขันไม่ซ้ำกัน และชั้นบนสุดเป็นเทวดา ยอดบนสุดมีพระพายทรงม้า",
+      "answer_en": "Each tier has different carriers: giants at the bottom, monkeys in the middle (each with different funny faces!), and devas at the top. The very tip has Lord Vayu riding a horse."
+    },
+    {
+      "id": "wa_top",
+      "location_id": "wat_arun",
+      "question_type": "what",
+      "keywords_th": ["ยอดนพศูล", "นพศูล", "พระพาย", "ทรงม้า", "ยอดปรางค์"],
+      "keywords_en": ["nopasun top", "vayu horse"],
+      "answer_th": "ยอดสุดของพระปรางค์เรียกว่ายอดนพศูลครับ มีรูปปั้นพระพายทรงม้าอยู่ พระพายเป็นเทพแห่งลม เป็นสัญลักษณ์ของพลังลมที่พัดพาสู่ความสูง",
+      "answer_en": "The very top is called Nopasun, featuring Lord Vayu (god of wind) riding a horse—symbolizing the wind that carries spirits upward."
+    },
+    {
+      "id": "wa_taksin_bed",
+      "location_id": "wat_arun",
+      "question_type": "what",
+      "keywords_th": ["พระแท่นบรรทม", "พระเจ้าตากสิน", "วิหารน้อย", "คลานลอด", "ล้างอาถรรพ์"],
+      "keywords_en": ["taksin bed", "small chapel"],
+      "answer_th": "ที่วิหารน้อยมีพระแท่นบรรทม หรือเตียงไม้ส่วนพระองค์ของสมเด็จพระเจ้าตากสินมหาราชครับ สายมูห้ามพลาดเด็ดขาด! วิธีขอพรคือให้พนมมือตั้งจิตระลึกถึงพระองค์ท่าน แล้วคลานลอดใต้พระแท่นเพื่อล้างอาถรรพ์และปัดเป่าสิ่งไม่ดี เคล็ดลับจากผมคือให้ขอพรเรื่อง 'ชัยชนะต่ออุปสรรคและความเด็ดเดี่ยว'",
+      "answer_en": "In the small chapel: King Taksin's wooden bed. Pray then crawl under it to cleanse bad luck and pray for determination and victory!"
+    },
+    {
+      "id": "wa_main_buddha",
+      "location_id": "wat_arun",
+      "question_type": "what",
+      "keywords_th": ["พระประธานวัดอรุณ", "รัชกาลที่ 2", "ปั้นเอง", "พระพักตร์", "ฝีพระหัตถ์", "พระบรมอัฐิ"],
+      "keywords_en": ["main buddha rama 2"],
+      "answer_th": "พระประธานในพระอุโบสถ รัชกาลที่ 2 ทรงปั้นพระพักตร์ด้วยฝีพระหัตถ์พระองค์เองครับ และมีพระบรมอัฐิของท่านอยู่ใต้ฐานด้วย เป็นการประดิษฐ์ที่หาดูยาก",
+      "answer_en": "The main Buddha image's face was sculpted by King Rama II himself! His ashes are buried beneath the pedestal too—a rare and personal creation."
+    },
+    {
+      "id": "wa_nemi_murals",
+      "location_id": "wat_arun",
+      "question_type": "what",
+      "keywords_th": ["นิมิราชชาดก", "จิตรกรรมวัดอรุณ", "ภาพนรก", "สวรรค์", "ทองคำเปลว"],
+      "keywords_en": ["nemi jataka", "hell heaven murals"],
+      "answer_th": "ผนังพระอุโบสถมีจิตรกรรมนิมิราชชาดกครับ วาดภาพนรกได้น่ากลัวมากเพื่อเตือนสติคน ส่วนภาพสวรรค์ใช้ทองคำเปลวที่มีลวดลายเมฆแบบจีนผสมอยู่ สวยและน่าศึกษามาก",
+      "answer_en": "Walls show the Nemi Jataka—terrifying hell scenes as moral warnings, plus heaven scenes with gold leaf and mixed Chinese cloud patterns. Beautiful and thought-provoking."
+    },
+    {
+      "id": "wa_sunset",
+      "location_id": "wat_arun",
+      "question_type": "how",
+      "keywords_th": ["พระอาทิตย์ตก", "ตก", "เย็น", "ถ่ายรูป", "วิวพระปรางค์", "ท่าเตียน", "ชุดไทย"],
+      "keywords_en": ["sunset", "evening", "photo"],
+      "answer_th": "เวลาดีสุดคือ 16:30 ถึง 18:00 น. ครับ เช่าชุดไทยถ่ายรูปกับกระเบื้องสีขาวก่อน แล้วนั่งเรือกลับฝั่งท่าเตียน ดูพระอาทิตย์ตกได้ภาพเงาพระปรางค์เหมือนบนหลังเหรียญ 10 บาทเลย",
+      "answer_en": "Best time: 4:30-6 PM. Rent Thai costume for photos, then ferry to Tha Tien side for sunset—get that iconic silhouette like on the 10 baht coin!"
+    },
+    {
+      "id": "wa_10baht_coin",
+      "location_id": "wat_arun",
+      "question_type": "what",
+      "keywords_th": ["เหรียญ 10 บาท", "หลังเหรียญ", "10 บาท", "เหรียญสิบ"],
+      "keywords_en": ["10 baht coin"],
+      "answer_th": "ภาพพระปรางค์วัดอรุณอยู่บนหลังเหรียญ 10 บาทของไทยครับ เป็นภาพเงาตอนพระอาทิตย์ตกจากฝั่งท่าเตียน ใครมาควรลองถ่ายมุมเดียวกับบนเหรียญดู",
+      "answer_en": "Wat Arun's prang appears on the back of the 10 baht coin! A sunset silhouette from the Tha Tien side. Try taking the same angle!"
+    },
+    {
+      "id": "wa_thai_costume",
+      "location_id": "wat_arun",
+      "question_type": "how",
+      "keywords_th": ["เช่าชุดไทย", "ชุดไทย", "แต่งชุดไทย", "ถ่ายรูปชุดไทย"],
+      "keywords_en": ["rent thai costume", "traditional dress"],
+      "answer_th": "หน้าวัดอรุณมีร้านเช่าชุดไทยเยอะมากครับ ราคาประมาณ 200-500 บาท พร้อมเครื่องประดับ ถ่ายรูปกับกระเบื้องสีขาวของพระปรางค์สวยมาก เป็นกิจกรรมยอดฮิตของนักท่องเที่ยว",
+      "answer_en": "Many Thai costume rental shops near Wat Arun—about 200-500 baht with accessories. Photos against the white tiles of the prang look amazing! Super popular activity."
+    },
+
+    {
+      "id": "general_temples",
+      "location_id": null,
+      "question_type": "what",
+      "keywords_th": ["วัดในกรุงเทพ", "วัดเด็ด", "แนะนำวัด", "วัดสำคัญ"],
+      "keywords_en": ["bangkok temples", "recommend"],
+      "answer_th": "ผมรู้จัก 3 วัดเด็ดในกรุงเทพครับ วัดพระแก้ว วัดอรุณ และวัดโพธิ์ อยู่ใกล้กันด้วย พาผมไปเที่ยวด้วยมั้ย",
+      "answer_en": "Three great temples: Wat Phra Kaew, Wat Arun, and Wat Pho. All close together!"
+    },
+    {
+      "id": "general_rama1",
+      "location_id": null,
+      "question_type": "who",
+      "keywords_th": ["รัชกาลที่ 1", "ร.1", "พระพุทธยอดฟ้า", "ผู้สร้างกรุงเทพ"],
+      "keywords_en": ["rama 1", "founder bangkok"],
+      "answer_th": "รัชกาลที่ 1 พระบาทสมเด็จพระพุทธยอดฟ้าจุฬาโลกครับ สร้างกรุงเทพปี 2325 สร้างวัดพระแก้วและปฏิสังขรณ์วัดโพธิ์ขนานใหญ่",
+      "answer_en": "King Rama I founded Bangkok in 1782, built Wat Phra Kaew, and majorly renovated Wat Pho."
+    },
+    {
+      "id": "general_rama2",
+      "location_id": null,
+      "question_type": "who",
+      "keywords_th": ["รัชกาลที่ 2", "ร.2", "พระพุทธเลิศหล้า", "ทรงปั้น"],
+      "keywords_en": ["rama 2"],
+      "answer_th": "รัชกาลที่ 2 พระบาทสมเด็จพระพุทธเลิศหล้านภาลัยครับ เป็นศิลปินจริงๆ ทรงปั้นพระพักตร์พระประธานวัดอรุณด้วยพระองค์เอง พระอัฐิอยู่ใต้ฐานพระประธาน",
+      "answer_en": "King Rama II, a true artist! He personally sculpted the face of Wat Arun's main Buddha. His ashes are kept beneath the pedestal."
+    },
+    {
+      "id": "general_rama3",
+      "location_id": null,
+      "question_type": "who",
+      "keywords_th": ["รัชกาลที่ 3", "ร.3", "พระนั่งเกล้า", "การค้าจีน"],
+      "keywords_en": ["rama 3"],
+      "answer_th": "รัชกาลที่ 3 ครับ ทรงสร้างพระนอนที่วัดโพธิ์ รวบรวมความรู้แพทย์โบราณ ส่งเสริมการค้ากับจีน เลยมีเครื่องเคลือบจีนเยอะในยุคนี้ ที่วัดโพธิ์มีลั่นถันจีนเพราะการค้าของท่าน",
+      "answer_en": "King Rama III built the Reclining Buddha, collected medical knowledge, and traded with China heavily—lots of Chinese porcelain from this era. The Wat Pho Chinese statues came from his trade."
+    },
+    {
+      "id": "general_rama4",
+      "location_id": null,
+      "question_type": "who",
+      "keywords_th": ["รัชกาลที่ 4", "ร.4", "พระจอมเกล้า", "นครวัด"],
+      "keywords_en": ["rama 4", "mongkut"],
+      "answer_th": "รัชกาลที่ 4 พระบาทสมเด็จพระจอมเกล้าเจ้าอยู่หัวครับ ทรงสร้างพระศรีรัตนเจดีย์ทองที่วัดพระแก้ว และนครวัดจำลอง ทรงเปิดสยามต่อโลกตะวันตก",
+      "answer_en": "King Rama IV (Mongkut) built the golden Phra Si Rattana Chedi and the Angkor Wat replica. He opened Siam to the Western world."
+    },
+    {
+      "id": "general_taksin",
+      "location_id": null,
+      "question_type": "who",
+      "keywords_th": ["พระเจ้าตากสิน", "ตากสิน", "กรุงธนบุรี"],
+      "keywords_en": ["king taksin", "thonburi"],
+      "answer_th": "พระเจ้าตากสินมหาราชครับ กู้เอกราชหลังเสียกรุงศรีอยุธยาครั้งที่ 2 ตั้งกรุงธนบุรีเป็นเมืองหลวงปี 2310 วัดอรุณคือวัดประจำรัชสมัยท่าน",
+      "answer_en": "King Taksin liberated Siam after Ayutthaya fell. Founded Thonburi as capital in 1767. Wat Arun was his royal temple."
+    },
+    {
+      "id": "general_ramakien",
+      "location_id": null,
+      "question_type": "what",
+      "keywords_th": ["รามเกียรติ์", "รามายณะ", "พระราม", "หนุมาน", "เรื่องรามเกียรติ์"],
+      "keywords_en": ["ramakien", "ramayana"],
+      "answer_th": "รามเกียรติ์เป็นวรรณกรรมไทยที่ดัดแปลงจากรามายณะของอินเดียครับ เล่าเรื่องพระรามตามนางสีดาที่ถูกทศกัณฐ์ลักไป มีหนุมานเป็นผู้ช่วย จิตรกรรมรอบวัดพระแก้วเล่าเรื่องนี้ทั้งหมด",
+      "answer_en": "The Ramakien is Thailand's adaptation of India's Ramayana. Tells of Prince Rama rescuing Sita from the demon Thotsakan, with Hanuman the monkey-warrior helping. The Wat Phra Kaew murals depict the entire epic."
+    },
+    {
+      "id": "general_hanuman",
+      "location_id": null,
+      "question_type": "who",
+      "keywords_th": ["หนุมาน", "ลิงเผือก", "พระลักษณ์"],
+      "keywords_en": ["hanuman", "white monkey"],
+      "answer_th": "หนุมานเป็นลิงเผือกผู้กล้าหาญในรามเกียรติ์ครับ ช่วยพระรามรบกับทศกัณฐ์ มีฤทธิ์เหาะได้ ตัวขยายตัวย่อได้ ฉากดังที่วัดพระแก้วคือตอนสู้นางสุพรรณมัจฉานางเงือก",
+      "answer_en": "Hanuman is the white monkey warrior in the Ramakien! Helped Rama defeat Thotsakan. Can fly and change size. Famous scene at Wat Phra Kaew: fighting Suphanmatcha the mermaid."
+    },
+    {
+      "id": "general_route",
+      "location_id": null,
+      "question_type": "how",
+      "keywords_th": ["เดินทาง", "ไปยังไง", "วิธีไป", "MRT", "เรือ"],
+      "keywords_en": ["transport", "how get there"],
+      "answer_th": "ไปวัด 3 วัดนี้ MRT ลงสถานีสนามไชยใกล้สุดครับ หรือนั่งเรือด่วนเจ้าพระยาลงท่าช้าง ท่าเตียน หรือท่าวัดโพธิ์ก็ได้",
+      "answer_en": "MRT Sanam Chai station is closest. Or take Chao Phraya Express boat to Tha Chang, Tha Tien, or Wat Pho pier."
+    },
+    {
+      "id": "general_route_order",
+      "location_id": null,
+      "question_type": "how",
+      "keywords_th": ["ลำดับ", "ไปวัดไหนก่อน", "วางแผน", "1 วัน"],
+      "keywords_en": ["plan", "one day"],
+      "answer_th": "แนะนำเริ่มวัดพระแก้วเช้าๆ ก่อนคนน้อย แล้วเดินไปวัดโพธิ์ ทานข้าวพักนวด พอบ่ายลงเรือไปวัดอรุณฝั่งตรงข้าม รอชมพระอาทิตย์ตก",
+      "answer_en": "Start Wat Phra Kaew early (less crowded), walk to Wat Pho for lunch and massage, then ferry to Wat Arun for sunset."
+    },
+    {
+      "id": "general_dress",
+      "location_id": null,
+      "question_type": "how",
+      "keywords_th": ["แต่งตัวเข้าวัด", "แต่งกาย", "ใส่อะไร", "เสื้อผ้า"],
+      "keywords_en": ["dress code", "what wear"],
+      "answer_th": "แต่งตัวสุภาพมากๆ นะครับ ห้ามใส่กางเกงขาสั้น แขนกุด กระโปรงสั้น เสื้อรัดรูป ถ้าลืม เค้ามีเสื้อกับผ้าให้ยืมที่ทางเข้า ลองเตรียมผ้าคลุมไปก็ดี",
+      "answer_en": "Dress modestly—no shorts, sleeveless tops, short skirts, or tight clothes. They lend covers at entrance if you forget. Bringing a shawl helps too."
+    },
+
+    {
+      "id": "wat_phra_kaew_intro",
+      "location_id": "wat_phra_kaew",
+      "is_intro": true,
+      "question_type": "story",
+      "keywords_th": ["ปลดล็อกพระแก้ว"],
+      "keywords_en": ["unlock phra kaew"],
+      "answer_th": "มาถึงวัดพระแก้วแล้วเหรอครับ วัดนี้สร้างปี พ.ศ. 2325 อยู่มาแล้วตั้ง 244 ปี สร้างโดยรัชกาลที่ 1 พร้อมกับกรุงเทพมหานคร ที่นี่เป็นที่ประดิษฐานของพระแก้วมรกต พระคู่บ้านคู่เมืองของไทย พระแก้วมรกตแกะจากหยกเขียวก้อนเดียว สูง 66 เซนติเมตร พระมหากษัตริย์จะทรงเปลี่ยนเครื่องทรงให้ตามฤดูถึงปีละ 3 ครั้งเลยนะครับ",
+      "answer_en": "You're at Wat Phra Kaew! Built 1782 by King Rama I along with Bangkok—244 years old! Home to the Emerald Buddha. Carved from a single jade, 66cm tall. The King changes its robes 3 times a year."
+    },
+    {
+      "id": "wat_arun_intro",
+      "location_id": "wat_arun",
+      "is_intro": true,
+      "question_type": "story",
+      "keywords_th": ["ปลดล็อกอรุณ"],
+      "keywords_en": ["unlock arun"],
+      "answer_th": "ถึงวัดอรุณแล้วครับ วัดนี้เก่ามากตั้งแต่สมัยอยุธยา ที่ชื่ออรุณเพราะพระเจ้าตากสินมหาราชยกทัพมาถึงตอนรุ่งสาง ที่นี่เคยประดิษฐานพระแก้วมรกตก่อนย้ายไปวัดพระแก้ว พระปรางค์สูง 82 เมตร เป็นสัญลักษณ์ของเขาพระสุเมรุ ตกแต่งด้วยเศษเครื่องเคลือบจีนนับล้านชิ้นเลยครับ",
+      "answer_en": "You're at Wat Arun! Ancient temple from Ayutthaya era. Named 'Arun' (dawn) because King Taksin arrived at sunrise. Once housed the Emerald Buddha. The 82m prang symbolizes Mount Meru, decorated with millions of porcelain pieces."
+    },
+    {
+      "id": "wat_pho_intro",
+      "location_id": "wat_pho",
+      "is_intro": true,
+      "question_type": "story",
+      "keywords_th": ["ปลดล็อกโพธิ์"],
+      "keywords_en": ["unlock pho"],
+      "answer_th": "มาถึงวัดโพธิ์แล้วครับ ที่นี่คือวัดเก่าแก่ที่สุดในกรุงเทพ มีตั้งแต่สมัยอยุธยา รัชกาลที่ 1 ทรงปฏิสังขรณ์ครั้งใหญ่ พระบรมราชสรีรางคารของรัชกาลที่ 1 อยู่ที่นี่ พระพุทธไสยาสยาว 46 เมตร สูง 15 เมตร เป็นพระพุทธรูปใหญ่สุดในกรุงเทพ ฝ่าพระบาทประดับมุกเป็นรูปมงคล 108 ประการ อีกอย่างที่นี่คือต้นกำเนิดการนวดแผนไทยครับ",
+      "answer_en": "You're at Wat Pho! Bangkok's oldest temple. The Reclining Buddha is 46m long, biggest in Bangkok. Soles inlaid with 108 lucky symbols. Birthplace of Thai massage!"
+    }
+  ]
+}

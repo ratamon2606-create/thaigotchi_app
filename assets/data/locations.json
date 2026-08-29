@@ -1,0 +1,43 @@
+{
+  "locations": [
+    {
+      "id": "wat_phra_kaew",
+      "name_th": "วัดพระแก้ว",
+      "name_en": "Wat Phra Kaew",
+      "full_name_th": "วัดพระศรีรัตนศาสดาราม",
+      "full_name_en": "Temple of the Emerald Buddha",
+      "teaser_th": "วัดสำคัญในพระบรมมหาราชวัง ที่ประดิษฐานพระแก้วมรกต",
+      "teaser_en": "The royal temple housing the Emerald Buddha",
+      "latitude": 13.7515,
+      "longitude": 100.4929,
+      "unlock_radius_m": 80,
+      "color": "#D4A648"
+    },
+    {
+      "id": "wat_arun",
+      "name_th": "วัดอรุณ",
+      "name_en": "Wat Arun",
+      "full_name_th": "วัดอรุณราชวรารามราชวรมหาวิหาร",
+      "full_name_en": "Temple of Dawn",
+      "teaser_th": "วัดแห่งรุ่งอรุณ ริมแม่น้ำเจ้าพระยา พระปรางค์ประดับด้วยกระเบื้องจีน",
+      "teaser_en": "Temple of Dawn by the Chao Phraya River, adorned with Chinese porcelain",
+      "latitude": 13.7437,
+      "longitude": 100.4889,
+      "unlock_radius_m": 80,
+      "color": "#E67E22"
+    },
+    {
+      "id": "wat_pho",
+      "name_th": "วัดโพธิ์",
+      "name_en": "Wat Pho",
+      "full_name_th": "วัดพระเชตุพนวิมลมังคลารามราชวรมหาวิหาร",
+      "full_name_en": "Temple of the Reclining Buddha",
+      "teaser_th": "วัดที่ประดิษฐานพระพุทธไสยาส และต้นกำเนิดการนวดแผนไทย",
+      "teaser_en": "Home to the Reclining Buddha and birthplace of Thai massage",
+      "latitude": 13.7466,
+      "longitude": 100.4933,
+      "unlock_radius_m": 80,
+      "color": "#8B3A3A"
+    }
+  ]
+}

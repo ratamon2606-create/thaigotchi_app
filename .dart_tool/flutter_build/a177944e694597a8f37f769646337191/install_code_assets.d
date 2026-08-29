@@ -1,0 +1,1 @@
+ /home/tcrose/Desktop/thaigotchi_app/.dart_tool/flutter_build/a177944e694597a8f37f769646337191/native_assets.json: 
