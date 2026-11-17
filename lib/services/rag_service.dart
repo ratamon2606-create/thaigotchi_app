@@ -22,7 +22,6 @@ class LocalRAGService {
   // Context tracking - last topic + location discussed
   String? _lastTopicId;
   String? _lastLocationId;
-  DateTime? _lastQueryTime;
   
   // Synonym table — Thai/English
   static const Map<String, List<String>> _synonyms = {
@@ -108,7 +107,6 @@ class LocalRAGService {
   void resetContext() {
     _lastTopicId = null;
     _lastLocationId = null;
-    _lastQueryTime = null;
   }
   
   /// Set location context (called from map screen when near a location)
@@ -267,7 +265,6 @@ class LocalRAGService {
     if (loc != null) {
       _lastLocationId = loc;
     }
-    _lastQueryTime = DateTime.now();
   }
   
   RAGResponse _topicToResponse(Map<String, dynamic> topic, String language) {
