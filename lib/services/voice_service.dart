@@ -222,7 +222,7 @@ class VoiceService extends ChangeNotifier {
         _listenCompleter = null;
       });
       
-      return completer.future;
+      return await completer.future;
     } catch (e) {
       debugPrint('Listen error: $e');
       _isListening = false;

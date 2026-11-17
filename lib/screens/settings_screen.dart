@@ -434,32 +434,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 
-  void _showHistory() {
-    showModalBottomSheet(
-      context: context,
-      builder: (ctx) => Container(
-        height: 300,
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Icon(Icons.history, size: 48, color: AppColors.cafeWallBrown),
-            const SizedBox(height: 16),
-            Text(
-              _settings.isThai 
-                  ? 'ยังไม่มีประวัติการถาม' 
-                  : 'No question history yet',
-              style: const TextStyle(
-                fontFamily: 'ChulabhornLikit',
-                fontSize: 16,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
   void _confirmClearHistory() {
     showDialog(
       context: context,
