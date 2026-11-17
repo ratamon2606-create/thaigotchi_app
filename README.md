@@ -1,4 +1,4 @@
-# Thaigotchi — มฤคนที 🦌
+# Pa-Pai (Thaigotchi)
 
 Cultural Heritage Tamagotchi for Kasetsart University Higher Education Innovation Awards 2026.
 
@@ -226,6 +226,28 @@ flutter install
 - Verify exact filename (case-sensitive on real devices)
 - Verify `pubspec.yaml` has `- assets/images/` declared
 - Run `flutter clean` after adding new images
+
+## Application Screenshots
+
+Actual screenshots captured from the Android application.
+
+| Onboarding | Device Status | Chat & Voice |
+|:---:|:---:|:---:|
+| <img src="docs/images/app-01-onboarding.jpg" alt="Onboarding and companion naming" width="190"> | <img src="docs/images/app-03-device-status.jpg" alt="Device connection and status screen" width="190"> | <img src="docs/images/app-04-chat.jpg" alt="Companion chat interface" width="190"> |
+
+| Explore Map | Location Discovery | Location Story |
+|:---:|:---:|:---:|
+| <img src="docs/images/app-05-map.jpg" alt="Map with points of interest" width="190"> | <img src="docs/images/app-06-location-discovered.jpg" alt="Location discovery dialog" width="190"> | <img src="docs/images/app-07-location-story-chat.jpg" alt="Location story shown in chat" width="190"> |
+
+> Additional state: [Connecting to device](docs/images/app-02-connecting.jpg).
+
+## Project Poster
+
+The original project poster presents the broader concept and proposed user journey.
+
+<a href="docs/images/project-poster.png"><img src="docs/images/project-poster.png" alt="Pa-Pai project poster" width="480"></a>
+
+For the ESP32 hardware implementation, see the [Thaigotchi Firmware repository](https://github.com/ratamon2606-create/thaigotchi_firmware).
 
 ## License
 
