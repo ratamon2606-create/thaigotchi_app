@@ -6,3 +6,8 @@ dist/
 *.log
 __pycache__/
 .venv/
+.dart_tool/
+.idea/
+.flutter-plugins-dependencies
+*.iml
+build/
